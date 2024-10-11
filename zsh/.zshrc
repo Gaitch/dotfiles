@@ -33,6 +33,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias cd..='cd ..'
 alias cd='z'
 alias ls='exa -l --icons'
-alias fz='fzf -m --preview="batcat --color=always {}"'
+alias fzf='fzf -m --preview="batcat --color=always {}"'
 alias aptdate='sudo apt update && sudo apt upgrade -y' 
 
