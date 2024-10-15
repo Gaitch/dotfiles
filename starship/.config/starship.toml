@@ -1,0 +1,11 @@
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+style = 'bold red'
+
+[time]
+format = "[%F %T] "
+style = "bold white"
