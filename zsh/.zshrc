@@ -12,6 +12,9 @@ zstyle :compinstall filename '/home/roman/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
+# STARSHIP
+eval "$(starship init zsh)"
+
 # FZF
 # Set up fzf key bindings and fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
