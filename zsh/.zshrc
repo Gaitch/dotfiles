@@ -13,6 +13,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # STARSHIP
+
+# Load Starship
 eval "$(starship init zsh)"
 
 # FZF
@@ -38,4 +40,7 @@ alias cd='z'
 alias ls='exa -l --icons'
 alias fzf='fzf -m --preview="batcat --color=always {}"'
 alias aptdate='sudo apt update && sudo apt upgrade -y' 
+alias pdfmain='pdflatex main.tex && rm main.{aux,log,out,toc,bbl,blg,bcf,fdb_latexmk,fls,lof,run.xml}'
 
+
+export PATH=$PATH:/usr/local/MATLAB/R2024b/bin
