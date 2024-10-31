@@ -41,6 +41,6 @@ alias ls='exa -l --icons'
 alias fzf='fzf -m --preview="batcat --color=always {}"'
 alias aptdate='sudo apt update && sudo apt upgrade -y' 
 alias pdfmain='pdflatex main.tex && rm main.{aux,log,out,toc,bbl,blg,bcf,fdb_latexmk,fls,lof,run.xml}'
-
+alias texbuild='lualatex -output-directory=out main.tex && rm out/main.{aux,log,out,toc,bbl,blg,bcf,fdb_latexmk,fls,lof,run.xml}'
 
 export PATH=$PATH:/usr/local/MATLAB/R2024b/bin
