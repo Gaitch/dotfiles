@@ -44,6 +44,6 @@ alias pdfmain='pdflatex main.tex && rm main.{aux,log,out,toc,bbl,blg,bcf,fdb_lat
 alias texbuild='lualatex -output-directory=out main.tex && mv out/main.pdf .'
 alias ytdl='yt-dlp -o "%(title)s.%(ext)s"'
 alias ytdl-pl='yt-dlp -o "~/Videos/random/%(title)s.%(ext)s" "https://www.youtube.com/watch?v=cWNUl1vKeg4&list=PLIv1DeEOKsmIkcb1uZB-cmM3gwmuSIy0_"'
-
+alias restart-audio='systemctl --user restart pipewire pipewire-pulse wireplumber'
 
 export PATH=$PATH:/usr/local/MATLAB/R2024b/bin
