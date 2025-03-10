@@ -1,11 +1,18 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+[os]
+disabled = false
+
+[time]
+disabled = true
+
 [battery]
 full_symbol = '🔋 '
 charging_symbol = '⚡️ '
 discharging_symbol = '💀 '
+disabled = false
 
 [[battery.display]]
 style = 'bold red'
-
-[time]
-format = "[%F %T] "
-style = "bold white"
+threshold = 20

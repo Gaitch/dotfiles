@@ -45,5 +45,8 @@ alias texbuild='lualatex -output-directory=out main.tex && mv out/main.pdf .'
 alias ytdl='yt-dlp -o "%(title)s.%(ext)s"'
 alias ytdl-pl='yt-dlp -o "~/Videos/random/%(title)s.%(ext)s" "https://www.youtube.com/watch?v=cWNUl1vKeg4&list=PLIv1DeEOKsmIkcb1uZB-cmM3gwmuSIy0_"'
 alias restart-audio='systemctl --user restart pipewire pipewire-pulse wireplumber'
+alias dl='yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o "%(title)s.%(ext)s"'  
 
 export PATH=$PATH:/usr/local/MATLAB/R2024b/bin
+export PATH=$PATH:~/hslu/ku/projects/iot/dev/pico/picotool/build
+export PICO_SDK_PATH=~/hslu/ku/projects/iot/dev/pico/pico-sdk/
