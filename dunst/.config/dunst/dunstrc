@@ -1,0 +1,63 @@
+[global]
+    # Font settings
+    font = Iosevka Nerd Font 12
+    line_height = 10  # Adjust line spacing
+    format = "%s\\n%b"  # Display summary and body text
+
+    # Notification size & positioning
+    width = 350
+    height = 200  # Ensure notifications expand properly
+    padding = 20
+    horizontal_padding = 20
+    text_icon_padding = 10
+
+    # Rounded corners (Requires picom)
+    corner_radius = 10
+
+    # Alignment settings
+    alignment = left
+    vertical_alignment = center
+    word_wrap = yes
+    ellipsize = end # Ensures the full text is displayed
+    ignore_newline = no
+
+    # Colors & transparency
+    frame_width = 2
+    frame_color = "#88C0D0"
+    separator_color = frame
+    transparency = 10  # Adjust transparency level
+
+    # Icon settings
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+    icon_path = /usr/share/icons/Papirus/32x32/status/
+
+    # Notification behavior
+    monitor = 0
+    follow = mouse
+    sticky_history = yes
+    history_length = 20
+    show_age_threshold = 60
+
+    # Mouse behavior
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
+
+[urgency_low]
+    background = "#2E3440"
+    foreground = "#D8DEE9"
+    timeout = 5
+
+[urgency_normal]
+    background = "#3B4252"
+    foreground = "#E5E9F0"
+    timeout = 8
+
+[urgency_critical]
+    background = "#BF616A"
+    foreground = "#ECEFF4"
+    frame_color = "#D08770"
+    timeout = 0
+
