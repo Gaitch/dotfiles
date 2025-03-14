@@ -45,7 +45,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 
 
-exec --no-startup-id feh --bg-scale /path/to/your/2.jpg
+exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/2.jpg
 
 bindsym $mod+Shift+x exec --no-startup-id i3lock -i ~/dotfiles/wallpaper/3.png
 
