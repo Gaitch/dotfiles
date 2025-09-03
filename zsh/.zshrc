@@ -28,16 +28,26 @@ compinit
 eval "$(zoxide init zsh)"
 # End of lines added by compinstall
 
+# Autosuggestions
+[[ -r /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Syntax highlighting (source near the end of .zshrc)
+[[ -r /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
 # AUTOSUGGESTION
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # HIGHLIGHTING
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 
 alias cd..='cd ..'
 alias cd='z'
-alias ls='exa -l --icons'
+alias ls='eza -l --icons'
 alias fzf='fzf -m --preview="batcat --color=always {}"'
 alias aptdate='sudo apt update && sudo apt upgrade -y' 
 alias pdfmain='pdflatex main.tex && rm main.{aux,log,out,toc,bbl,blg,bcf,fdb_latexmk,fls,lof,run.xml}'
