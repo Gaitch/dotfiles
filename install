@@ -1,0 +1,20 @@
+# install essentials software
+zsh, i3, kitty, starship, rofi, nvim
+
+# set zsh as default 
+
+# download dotfiles from git repo
+
+# stow dotfiles
+
+# install network manager and applet
+# uninstall 
+sudo apt remove ifupdown
+
+# start audio server
+#
+systemctl --user enable --now pulseaudio.socket pulseaudio.service
+pulseaudio --start 
+# needs reboot
+#
+# download font Iosevka
