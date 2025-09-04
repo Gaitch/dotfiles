@@ -18,3 +18,15 @@ pulseaudio --start
 # needs reboot
 #
 # download font Iosevka
+#
+#
+# to have proper touchpad support create the following file with input:
+/etc/X11/xorg.conf.d/40-libinput.conf
+
+Section "InputClass"
+    Identifier "touchpad"
+    MatchIsTouchpad "on"
+    Driver "libinput"
+    Option "Tapping" "on"
+EndSection
+
