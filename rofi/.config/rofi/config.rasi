@@ -1,66 +1,61 @@
 configuration {
   modi: "drun,run,window";
-  font: "Iosevka Nerd Font Bold 20";
+  font: "Iosevka Nerd Font Bold 18";
   show-icons: true;
   drun-display-format: "{name}";
   matching: "fuzzy";
   cycle: true;
+  kb-element-next: "";            /* unbind Tab from row switching */
+  kb-mode-next: "Tab";       /* Tab → next modi */
+  kb-mode-previous: "Shift+Tab";  /* Shift+Tab → previous modi */
 }
 
+@theme "/dev/null"
+
 * {
-  bg: #282a2e;   /* dark gray background */
+  bg: #282a2e;		// Background color
+  bg-in: #85678f;	// background color input
+
   tx: #c5c8c6;   /* light text */
-  sl: #85678f;
+  sl-tx:#ffffff;
+
+  background-color:@bg;
+  text-color:@tx;
   }
 
 window {
-  background-color: transparent;
+
 }
 
 mainbox {
-  border-color: @sl;        /* subtle border */
-  border-radius: 7px;       /* rounded corners */
-  background-color: @bg;    /* dark gray background */
-  padding: 0px;
-  margin: 0px;
+  children:[inputbar,listview];
+  border:true;
+  border-color: @bg-in;        /* subtle border */
 }
 
 inputbar {
+  childen:[prompt, entry];
   padding: 10px;
-  text-color: @tx;
-  num-filtered-rows: false;
-  background-color: transparent;  /* let mainbox background show */
+  background-color:@bg-in;
+}
+
+prompt, entry{
+  background-color:inherit;
 }
 
 listview {
   lines: 5;
   scrollbar: false;
   dynamic: true;
-  background-color: transparent;  /* no overlap with mainbox */
 }
-
 
 element {
   padding:10px;
-  //background-color:@bg;
-  orientation: horizontal;
- // children: [element-icon, element-text];
   spacing: 15px;
 }
 
-entry, prompt, element-text {
-text-color:@tx;
-}
-
-element normal.normal{
- background-color:@bg;
- }
-
- element alternate.normal{
- background-color:@bg;
- }
-
-element selected.normal { 
- background-color:@sl;
+element-text selected{ 
+ text-color:@sl-tx;
+ highlight: None;
 }
 
