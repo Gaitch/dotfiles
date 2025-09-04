@@ -1,0 +1,66 @@
+configuration {
+  modi: "drun,run,window";
+  font: "Iosevka Nerd Font Bold 20";
+  show-icons: true;
+  drun-display-format: "{name}";
+  matching: "fuzzy";
+  cycle: true;
+}
+
+* {
+  bg: #282a2e;   /* dark gray background */
+  tx: #c5c8c6;   /* light text */
+  sl: #85678f;
+  }
+
+window {
+  background-color: transparent;
+}
+
+mainbox {
+  border-color: @sl;        /* subtle border */
+  border-radius: 7px;       /* rounded corners */
+  background-color: @bg;    /* dark gray background */
+  padding: 0px;
+  margin: 0px;
+}
+
+inputbar {
+  padding: 10px;
+  text-color: @tx;
+  num-filtered-rows: false;
+  background-color: transparent;  /* let mainbox background show */
+}
+
+listview {
+  lines: 5;
+  scrollbar: false;
+  dynamic: true;
+  background-color: transparent;  /* no overlap with mainbox */
+}
+
+
+element {
+  padding:10px;
+  //background-color:@bg;
+  orientation: horizontal;
+ // children: [element-icon, element-text];
+  spacing: 15px;
+}
+
+entry, prompt, element-text {
+text-color:@tx;
+}
+
+element normal.normal{
+ background-color:@bg;
+ }
+
+ element alternate.normal{
+ background-color:@bg;
+ }
+
+element selected.normal { 
+ background-color:@sl;
+}
+
