@@ -1,6 +1,6 @@
 [global]
     # Font settings
-    font = Iosevka Nerd Font 12
+    font = Iosevka Nerd Font 14
     line_height = 10  # Adjust line spacing
     format = "%s\\n%b"  # Display summary and body text
 
@@ -12,7 +12,7 @@
     text_icon_padding = 10
 
     # Rounded corners (Requires picom)
-    corner_radius = 10
+    # corner_radius = 10
 
     # Alignment settings
     alignment = left
@@ -23,9 +23,9 @@
 
     # Colors & transparency
     frame_width = 2
-    frame_color = "#88C0D0"
+    frame_color = "#b294bb"
     separator_color = frame
-    transparency = 10  # Adjust transparency level
+    transparency = 40  # Adjust transparency level
 
     # Icon settings
     icon_position = left
