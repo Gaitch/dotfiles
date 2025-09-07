@@ -1,10 +1,13 @@
 configuration {
   modi: "drun,run,window";
+  display-drun: "Application:";
   font: "Iosevka Nerd Font Bold 18";
   show-icons: true;
-  drun-display-format: "{name}";
-  matching: "fuzzy";
+  drun-display-format: "{icon} {name}";
+  matching: "normal";
   cycle: true;
+
+  // Make mode switch with TAB
   kb-element-next: "";            /* unbind Tab from row switching */
   kb-mode-next: "Tab";       /* Tab → next modi */
   kb-mode-previous: "Shift+Tab";  /* Shift+Tab → previous modi */
@@ -13,13 +16,13 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #282a2e;		// Background color
-  bg-in: #85678f;	// background color input
+  bg: #282a2e60;		// Background color
+  bg-in: #85678f60;	// background color input
 
   tx: #c5c8c6;   /* light text */
   sl-tx:#ffffff;
 
-  background-color:@bg;
+  background-color:transparent;
   text-color:@tx;
   }
 
@@ -31,6 +34,7 @@ mainbox {
   children:[inputbar,listview];
   border:true;
   border-color: @bg-in;        /* subtle border */
+  background-color:@bg;
 }
 
 inputbar {
@@ -39,20 +43,23 @@ inputbar {
   background-color:@bg-in;
 }
 
-prompt, entry{
-  background-color:inherit;
-}
+prompt{
+  padding:0 15px 0 0;
+  }
 
 listview {
   lines: 5;
   scrollbar: false;
-  dynamic: true;
 }
 
 element {
   padding:10px;
   spacing: 15px;
 }
+
+element-icon{
+  size:25;
+  }
 
 element-text selected{ 
  text-color:@sl-tx;
