@@ -24,14 +24,6 @@ font pango:Iosevka Nerd Font 11
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
-
-# Start KDE services in i3
-# exec --no-startup-id kded5
-# exec --no-startup-id plasmashell --replace &
-# exec --no-startup-id /usr/libexec/plasma_mediacenter &
-# exec --no-startup-id /usr/bin/kglobalaccel5 &
-
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -47,7 +39,7 @@ exec --no-startup-id dunst
 
 exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/2.jpg
 
-bindsym $mod+Shift+x exec --no-startup-id i3lock -i ~/dotfiles/wallpaper/3.png
+bindsym $mod+Shift+x exec --no-startup-id i3lock -i ~/dotfiles/wallpaper/3.jpg
 
 
 bindsym $mod+Shift+z exec --no-startup-id rm -f ~/dotfiles/wallpaper/screen_locked.png ~/dotfiles/wallpaper/screen_locked_blurred.png && scrot ~/dotfiles/wallpaper/screen_locked.png && convert ~/dotfiles/wallpaper/screen_locked.png -blur 5x3 ~/dotfiles/wallpaper/screen_locked_blurred.png && i3lock -i ~/dotfiles/wallpaper/screen_locked_blurred.png
@@ -57,19 +49,21 @@ bindsym $mod+Shift+z exec --no-startup-id rm -f ~/dotfiles/wallpaper/screen_lock
 set $refresh_i3status killall -SIGUSR1 i3status
 
 
-bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl -d intel_backlight set +10% && notify-send "Brightness \+"
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backlight set 10%- "Brightness \-"
+bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl -d intel_backlight set +10% && notify-send -r 9998 "Brightness +"
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl -d intel_backlight set 10%- && notify-send -r 9998 "Brightness -"
 
 
 
 # Volume up with notification
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send "🔊 Volume: $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')" && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -r 9999 "🔊 Volume: $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')" && $refresh_i3status
 
 # Volume down with notification
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send "🔉 Volume: $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')" && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -r 9999 "🔉 Volume: $(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')" && $refresh_i3status
+
+
 
 # Mute/unmute with notification
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send "🔇 Volume: $(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $3}')" && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -r 9999 "🔇 Volume: $(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $3}')" && $refresh_i3status
 
 # Play/Pause
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause && notify-send "⏯️ Play/Pause"
