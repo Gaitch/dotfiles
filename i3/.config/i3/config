@@ -36,12 +36,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 
-
+# WALLPAPER
 exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/2.jpg
 
-bindsym $mod+Shift+x exec --no-startup-id i3lock -i ~/dotfiles/wallpaper/3.jpg
-
-
+# LOCKSCREEN SHORTCUT
 bindsym $mod+Shift+z exec --no-startup-id rm -f ~/dotfiles/wallpaper/screen_locked.png ~/dotfiles/wallpaper/screen_locked_blurred.png && scrot ~/dotfiles/wallpaper/screen_locked.png && convert ~/dotfiles/wallpaper/screen_locked.png -blur 5x3 ~/dotfiles/wallpaper/screen_locked_blurred.png && i3lock -i ~/dotfiles/wallpaper/screen_locked_blurred.png
 
 
@@ -225,3 +223,4 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
