@@ -14,7 +14,7 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,s
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/dotfiles/scripts/lock.sh --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -25,7 +25,7 @@ exec --no-startup-id dunst
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # WALLPAPER
-exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/2.jpg
+exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/wallpaper.jpg
 
 # ================================== SHORTCUTS=====================================================
 
@@ -33,7 +33,7 @@ exec --no-startup-id feh --bg-fill ~/dotfiles/wallpaper/2.jpg
 bindsym $mod+Return exec --no-startup-id kitty
 
 # LOCKSCREEN SHORTCUT
-bindsym $mod+Shift+z exec --no-startup-id rm -f ~/dotfiles/wallpaper/screen_locked.png ~/dotfiles/wallpaper/screen_locked_blurred.png && scrot ~/dotfiles/wallpaper/screen_locked.png && convert ~/dotfiles/wallpaper/screen_locked.png -blur 5x3 ~/dotfiles/wallpaper/screen_locked_blurred.png && i3lock -i ~/dotfiles/wallpaper/screen_locked_blurred.png
+bindsym $mod+Shift+z exec --no-startup-id ~/dotfiles/scripts/lock.sh
 
 # BRIGHTNESS SCREEN
 bindsym XF86MonBrightnessUp   exec --no-startup-id brightnessctl -d intel_backlight set +10% && notify-send -r 9998 "Brightness +"
