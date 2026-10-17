@@ -2,14 +2,23 @@
     "python.defaultInterpreterPath": "/bin/python3",
     "breadcrumbs.enabled": false,
     "window.density.layout": "compact",
-    "workbench.editor.showTabs": "single",
+    "workbench.editor.showTabs": "none",
 
     "window.zoomLevel": 0.7,
 
     "editor.fontSize": 14,
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
-
+    "editor.selectionHighlight": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.guides.indentation": false,
+    "editor.guides.bracketPairs": false,
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
     "vim.useSystemClipboard": true,
 
     "security.workspace.trust.untrustedFiles": "open",
@@ -18,5 +27,7 @@
     "workbench.layoutControl.enabled": false,
     "chat.titleBar.openInAgentsWindow.enabled": false,
     "window.commandCenter": false,
-    "workbench.browser.showInTitleBar": false
+    "workbench.browser.showInTitleBar": false,
+    "editor.stickyScroll.enabled": false,
+    "workbench.colorTheme": "GitHub Dark"
 }
