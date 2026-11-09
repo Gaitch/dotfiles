@@ -21,6 +21,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/dotfiles/scripts/lock.s
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 
+exec --no-startup-id conky
 # Refresh i3status
 set $refresh_i3status killall -SIGUSR1 i3status
 
@@ -63,7 +64,7 @@ tiling_drag modifier titlebar
 bindsym $mod+Shift+q kill
 
 # ROFI
-bindsym mod1+space exec "rofi -modi drun,run -show drun"
+bindsym mod1+space exec "rofi -show drun"
 # bindcode $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # I3 CONTROLS
