@@ -6,7 +6,7 @@
 
     "window.zoomLevel": 0.7,
 
-    "editor.fontSize": 14,
+    "editor.fontSize": 18,
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "editor.selectionHighlight": false,
@@ -29,5 +29,6 @@
     "window.commandCenter": false,
     "workbench.browser.showInTitleBar": false,
     "editor.stickyScroll.enabled": false,
-    "workbench.colorTheme": "GitHub Dark"
+    "workbench.colorTheme": "GitHub Dark",
+    "jupyter.askForKernelRestart": false
 }
